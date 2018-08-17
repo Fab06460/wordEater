@@ -11,3 +11,6 @@ wordEater eats texts and generates a summary of word occurrences, sorted by leng
 or
 `java wordEater/wordEaterMain theText.txt`
 
+## Using Eclipse
+The project has been developed using Eclipse Photon 4.8.0.
+Unit tests requires JUnit5.
