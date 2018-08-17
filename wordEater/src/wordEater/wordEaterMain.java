@@ -16,7 +16,6 @@ import java.util.logging.Logger;
  * or through stdin (example: ./wordEaterMain < theText.txt)
  * 
  * @author fabricebelloncle
- * @version 1.0
  * 
  * <LICENSE TEXT HERE>
  * 
