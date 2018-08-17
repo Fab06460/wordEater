@@ -56,9 +56,11 @@ public class wordEaterMain {
 		String s;
 		try {
 			// Read lines from buffer
-			while ((s = in.readLine()) != null && s.length() != 0) {
-				log.finest("read line: " + s);
-				analyzer.addString(s);
+			while ((s = in.readLine()) != null) {
+				if ( s.length() > 0 ) {
+					log.finest("read line: " + s);
+					analyzer.addString(s);					
+				}
 			}
 		} catch (IOException e) {
 			String message = "IOException while reading stdin: " + e.toString();
