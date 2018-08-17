@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"wordEater","l":"Analyzer"},{"p":"wordEater.SimpleList","l":"ISimpleListElement"},{"p":"wordEater.SimpleList","l":"SimpleList"},{"p":"wordEater","l":"wordEaterMain"},{"p":"wordEater","l":"WordOccurrence"}]
