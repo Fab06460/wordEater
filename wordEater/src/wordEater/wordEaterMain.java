@@ -13,7 +13,7 @@ import java.util.logging.Logger;
  * of each word in the text, primarily sorted by word length, and secondary sorted by ASCII value of the word.
  * 
  * The text can be provided either by specifying a file name as the argument of the command
- * or through stdin (example: ./wordEaterMain < theText.txt)
+ * or through stdin (example: ./wordEaterMain theText.txt or ./wordEaterMain < theText.txt)
  * 
  * @author fabricebelloncle
  * 
