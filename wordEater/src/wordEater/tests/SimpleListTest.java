@@ -3,6 +3,7 @@ package wordEater.tests;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -80,5 +81,15 @@ class SimpleListTest {
 		assertEquals("Word2", list.getAtIndex(4).str);		
 	}
 	
-	// TODO test array index out of bounds exceptions
+	@Test
+	void test_getAtIndexOutOfBoundsException() {
+		Assertions.assertThrows(ArrayIndexOutOfBoundsException.class, () ->  { list.getAtIndex(1000); });
+		Assertions.assertThrows(ArrayIndexOutOfBoundsException.class,  () -> { list.getAtIndex(-10); });
+	}
+
+	@Test
+	void test_insertAtIndexOutOfBoundsException() {
+		Assertions.assertThrows(ArrayIndexOutOfBoundsException.class, () ->  { list.insertAtIndex(1000, new ElementTestType("Word")); });
+		Assertions.assertThrows(ArrayIndexOutOfBoundsException.class,  () -> { list.insertAtIndex(-10, new ElementTestType("Word")); });		
+	}
 }
