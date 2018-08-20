@@ -126,9 +126,13 @@ public class SimpleList<E extends ISimpleListElement<E>> {
 	 * @return index of element in the list or -1 if not found
 	 */
 	public int indexOf(E element) {
+		if (element == null) 
+			return -1;
+		
 		int i = 1;
 		Node<E> current = root;
-		while ((i<=size) && (current.element.compareTo(element) != 0)) {
+		while ((i<=size) && ((current.getElement()==null) 
+				|| (current.getElement().compareTo(element) != 0))) {
 			current = current.getNext();
 			i++;
 		}
@@ -159,7 +163,7 @@ public class SimpleList<E extends ISimpleListElement<E>> {
 		String str = "";
 		Node<E> node = root;
 		while ( node.getNext() != null ) {
-			str += node.getElement().toString() + ", ";
+			str += (node.getElement()==null?"<null>":node.getElement().toString()) + ", ";
 			node = node.getNext();
 		}
 		return str;

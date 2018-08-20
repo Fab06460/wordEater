@@ -8,8 +8,8 @@ package wordEater.SimpleList;
  */
 public interface ISimpleListElement<T> {
 	/**
-	 * Compares value hold in this element with t
-	 * @param t element to compare with the one hold in this.
+	 * Compares value held in this element with t
+	 * @param t element to compare with the one held in this.
 	 * @return
 	 */
 	public int compareTo(T t);

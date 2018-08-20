@@ -3,7 +3,7 @@ package wordEater;
 import wordEater.SimpleList.ISimpleListElement;
 
 /**
- * This class is stores a word and its associated number of occurrence.
+ * This class stores a word and its associated number of occurrence.
  * @author fabricebelloncle
  *
  */
@@ -12,7 +12,7 @@ public class WordOccurrence implements ISimpleListElement<WordOccurrence> {
 	private int occurrences;
 
 	public WordOccurrence(String word) {
-		this.word = word;
+		this.word = (word==null?"":word);
 		this.occurrences = 1;
 	}
 	

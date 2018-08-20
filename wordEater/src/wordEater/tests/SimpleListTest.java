@@ -92,4 +92,16 @@ class SimpleListTest {
 		Assertions.assertThrows(ArrayIndexOutOfBoundsException.class, () ->  { list.insertAtIndex(1000, new ElementTestType("Word")); });
 		Assertions.assertThrows(ArrayIndexOutOfBoundsException.class,  () -> { list.insertAtIndex(-10, new ElementTestType("Word")); });		
 	}
+	
+	@Test
+	void test_indexOf() {
+		// insert null element
+		list.insertAtIndex(1, null);
+		assertEquals(-1, list.indexOf(new ElementTestType("Word100")));
+		
+		// search null element
+		assertEquals(-1, list.indexOf(null));
+		
+		assertEquals(4, list.indexOf(new ElementTestType("Word3")));
+	}
 }
